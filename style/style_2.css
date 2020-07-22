@@ -1,0 +1,196 @@
+﻿
+/*--------------MENU DEROULENT-------------*/
+
+#menu, #menu  ul /* Liste */     
+{
+    display: block;
+    float: left;
+    position: relative;
+    padding-left: 2px;
+    padding-right: 2px;
+    list-style : none;
+    line-height : 21px;
+    text-align: center;
+    top: 27px;
+    font-size: medium;
+    left: 369px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    height: 35px;
+}
+#menu a /* Contenu des listes */
+{
+    display: block;
+    padding: 0;
+    color: #000000;
+    text-decoration: none;
+    max-height: inherit;
+    text-align: center;
+    height: 30px;
+}
+#menu li /* Éléments des listes */      
+{
+    float: left;
+}
+html>body #menu li /* IE ne reconnaissant pas le sélecteur ">" */
+{
+    border-right: 1px solid transparent;
+    width: 128px;
+    height: 30px;
+}
+    #menu li ul /* Sous-listes */ {
+        position: absolute; /* Position absolue */
+      
+        top: auto;
+        width: 100px; /* Largeur des sous-listes */
+        left: -999em;
+}
+  
+#menu li ul li /* Eléments de sous-listes */
+{
+        
+        border-top: 1px solid #fff; 
+       
+}
+html>body #menu li ul li/* IE ne reconnaissant pas le sélecteur ">" */                
+{
+        border-top: 1px solid transparent;
+}
+#menu li ul ul 
+{
+        margin: -22px 0 0 144px ;
+        border-left: 1px solid #fff ;   
+      
+           
+}
+#VIP 
+{
+   
+   margin-right:100px;
+ 
+}
+#contact 
+{
+    margin-left:17px;
+}
+#gallery 
+{
+}
+#menu li:hover ul ul, #menu li.sfhover ul ul /* Sous-sous-listes lorsque la souris passe sur un élément de liste */
+{
+        left: -999em; /* On expédie les sous-sous-listes hors du champ de vision */
+}
+#menu li:hover ul, #menu li li:hover ul, #menu li.sfhover ul, #menu li li.sfhover ul /* Sous-listes lorsque la souris passe sur un élément de liste ET sous-sous-lites lorsque la souris passe sur un élément de sous-liste */ 
+{
+        left: auto; /* Repositionnement normal */
+        min-height: 0; /* Corrige un bug sous IE */
+}
+#menu li:hover /* Lorsque la souris passe sur un des liens */    
+{
+        padding-top:5px;
+        text-align:center;
+
+}
+
+/*--------------Galerie d'images-------------*/
+#right 
+{
+    overflow: hidden;
+    height: 175px;
+    clear:both;
+}
+#right img 
+{
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    clear:both;
+}
+
+/*--------------Galerie d'images Shooting-------------*/
+#thumbsWrapper{
+    overflow:hidden;
+    position:relative;
+    height:auto;
+    width:100%;
+    left:0px;
+    right:0px;
+    background-color:black;
+	
+
+}
+#content{
+   position:relative;
+   top:0px;
+   height:auto;
+   width:100%;
+   left:0px;
+   background-color:#111;
+   display:none;
+   
+
+}
+#content img
+{
+    float:left;
+    cursor:pointer;
+    opacity:0.6;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=40);
+}
+#panel/*Panel Full */
+{
+    background-color:#222;
+    width:100%;
+    position:fixed;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    height:0px;
+    text-align:center; 
+}
+#panel img/*Panel Full image*/
+{
+    cursor:pointer;
+    position:relative;
+    border:1px solid #000;
+    -moz-box-shadow:0px 0px 10px #111;
+    -webkit-box-shadow:0px 0px 10px #111;
+    box-shadow:0px 0px 10px #111;
+    display:none;
+}
+.placeholder
+{
+    float:left;
+    clear:both;
+    width:100%;
+    height:30px;
+}
+#wrapper{
+    position:relative;
+    margin:40px auto 0px auto;
+}
+a#next,
+a#prev{
+    width:40px;
+    height:40px;
+    position:fixed;
+    cursor:pointer;
+    outline:none;
+    display:none;
+    background:#aaa url(../nav.png) no-repeat top left;
+}
+a#next:hover, a#prev:hover{
+    background-color:#fff;
+}
+a#next{
+    right:0px;
+    top:50%;
+    margin-top:-20px;
+    background-position: 0px 0px;
+}
+a#prev{
+    left:0px;
+    top:50%;
+    margin-top:-20px;
+    background-position: 0px -40px;
+}
